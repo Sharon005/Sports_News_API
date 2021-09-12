@@ -10,22 +10,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Sports News</h1>
+    <h1 style="text-align: center;">Sports News</h1>
 
-    {% for i in articles %}
+    <div class="container" >
+        <center>
+            {% for i in articles %}
 
-        <div class="card rounded shadow-lg m-2" style="width: 25rem;">
-            <img src="{{ i.urlToImage }}" class="card-img-top" alt="...">
-            <div class="card-body">
-            <p class="card-text">{{ i.author }}</p>
-            <h5 class="card-title">{{ i.title }}</h5>
-            <p class="card-title">{{ i.source.name }}</p>
-            <p class="card-text">{{ i.description }}</p>
-            <hr>
-            <a href="{{ i.url }}" target="_blank" class="btn btn-success m-1">See News</a>
+            <div class="card rounded shadow-lg m-2" style="width: 25rem;">
+                <img src="{{ i.urlToImage }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p class="card-text">{{ i.author }}</p>
+                <h5 class="card-title">{{ i.title }}</h5>
+                <p class="card-title">{{ i.source.name }}</p>
+                <p class="card-text">{{ i.description }}</p>
+                <hr>
+                <a href="{{ i.url }}" target="_blank" class="btn btn-success m-1">See News</a>
+                </div>
             </div>
-        </div>
 
-    {% endfor %}
+            {% endfor %}
+        </center>
+        
+    </div>
+    
 </body>
 </html>
